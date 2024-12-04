@@ -27,7 +27,6 @@ fn main() {
             if (point_symetric(row, column, &input_array)) {
                 continue;
             }
-
             count_of_occurrences += 1;
         }
     }
@@ -36,8 +35,8 @@ fn main() {
 }
 
 fn two_m_two_s(row: usize, column: usize, input_array: &Vec<&[u8]>) -> bool {
-    if !(column > 1
-        && row > 1
+    if !(column >= 1
+        && row >= 1
         && row + 1 < input_array.len()
         && column + 1 < input_array[row + 1].len())
     {
